@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 15s  # Interval untuk mengumpulkan metrik
+
+scrape_configs:
+  - job_name: 'chat_app'  # Nama job, bukan nama database
+    static_configs:
+      - targets: ['chat_worker:80']  # Endpoint yang ingin dimonitor
